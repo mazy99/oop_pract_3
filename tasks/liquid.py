@@ -38,8 +38,8 @@ class Alcohol(Liquid):
         self.__strength = strength
 
     def __str__(self):
-        return f"Алкоголь: {self.name}, \
-            Плотность: {self.density} кг/м³, Крепость: {self.strength}%"
+        return f"Алкоголь: {self.name},\
+ Плотность: {self.density} кг/м³, Крепость: {self.strength}%"
 
     @property
     def strength(self) -> float:

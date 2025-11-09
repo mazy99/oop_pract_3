@@ -28,8 +28,8 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 python_classes = "Test*"
 python_functions = "test_*"
-addopts = "--rootdir=. --pyargs"
-pythonpath = ["tasks","examples"]
+addopts = "-v --import-mode=append"
+pythonpath = [".","tasks","examples"]
 
 [tool.mypy]
 python_version = "3.14"
