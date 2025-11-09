@@ -1,7 +1,7 @@
 [project]
 name = "oop-pract-3"
 version = "0.1.0"
-description = "Add your description here"
+description = "Третья лабораторная работа по ООП"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
@@ -11,4 +11,28 @@ dependencies = [
     "mypy>=1.18.2",
     "pre-commit>=4.4.0",
     "pytest>=9.0.0",
+    "uv>=0.9.8",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=7.0.0",
+    "pytest>=9.0.0",
+]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "--rootdir=. --pyargs"
+pythonpath = ["tasks","examples"]
+
+[tool.mypy]
+python_version = "3.14"
+explicit_package_bases = true
+namespace_packages = true
+disable_error_code = "no-redef,attr-defined,misc"
