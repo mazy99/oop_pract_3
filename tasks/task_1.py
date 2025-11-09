@@ -23,17 +23,17 @@ if __name__ == "__main__":
     vodka.strength = 45
     print(f"После переназначения: {vodka}")
 
-    vodka.strength = vodka.strength - 5  # Уменьшаем крепость на 5%
+    vodka.strength = vodka.strength - 5
     print(f"После уменьшения крепости: {vodka}")
 
     print(f"Крепость напитка: {vodka.strength}%")
 
     try:
-        vodka.strength = 150  # Пытаемся установить некорректную крепость
+        vodka.strength = 150
     except ValueError as e:
         print(f"Ошибка: {e}")
 
     try:
-        water.density = -10  # Пытаемся установить отрицательную плотность
+        water.density = -10
     except ValueError as e:
         print(f"Ошибка: {e}")
