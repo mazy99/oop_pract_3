@@ -132,18 +132,6 @@ class TestInheritanceAndAbstract:
         assert isinstance(str(ball), str)
 
 
-class TestVirtualMethods:
-    """Тесты виртуальных методов"""
-
-    def test_virtual_output(self):
-        """Тест метода virtual_output"""
-        p = Parallelepiped(2.0, 3.0, 4.0)
-        ball = Ball(3.0)
-
-        p.virtual_output()
-        ball.virtual_output()
-
-
 def test_multiple_objects():
     """Тест работы с несколькими объектами"""
 

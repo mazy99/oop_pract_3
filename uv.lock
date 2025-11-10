@@ -174,7 +174,10 @@ dev = [
     { name = "black" },
     { name = "flake8" },
     { name = "isort" },
+    { name = "mypy" },
+    { name = "pre-commit" },
     { name = "pytest" },
+    { name = "uv" },
 ]
 
 [package.metadata]
@@ -193,7 +196,10 @@ dev = [
     { name = "black", specifier = ">=25.9.0" },
     { name = "flake8", specifier = ">=7.3.0" },
     { name = "isort", specifier = ">=7.0.0" },
+    { name = "mypy", specifier = ">=1.18.2" },
+    { name = "pre-commit", specifier = ">=4.4.0" },
     { name = "pytest", specifier = ">=9.0.0" },
+    { name = "uv", specifier = ">=0.9.8" },
 ]
 
 [[package]]

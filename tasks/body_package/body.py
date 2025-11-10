@@ -20,15 +20,6 @@ class Body(ABC):
     def __str__(self) -> str:
         pass
 
-    @classmethod
-    @abstractmethod
-    def from_input(cls) -> "Body":
-        pass
-
-    def virtual_output(self) -> None:
-        print(f"Площадь поверхности: {self.surface_area():.2f}")
-        print(f"Объем: {self.volume():.2f}")
-
 
 class Parallelepiped(Body):
 
@@ -87,21 +78,6 @@ class Parallelepiped(Body):
             f"  Объем: {self.volume():.2f}"
         )
 
-    @classmethod
-    def from_input(cls) -> "Parallelepiped":
-        try:
-            length = float(input("Введите длину параллелепипеда: "))
-            width = float(input("Введите ширину параллелепипеда: "))
-            height = float(input("Введите высоту параллелепипеда: "))
-            return cls(length, width, height)
-        except ValueError:
-            print("Ошибка: введите числовые значения!")
-            return cls()
-
-    def virtual_output(self) -> None:
-        print(f"Площадь поверхности параллелепипеда: {self.surface_area():.2f}")
-        print(f"Объем параллелепипеда: {self.volume():.2f}")
-
 
 class Ball(Body):
 
@@ -132,25 +108,3 @@ class Ball(Body):
             f"  Площадь поверхности: {self.surface_area():.2f}\n"
             f"  Объем: {self.volume():.2f}"
         )
-
-    @classmethod
-    def from_input(cls) -> "Ball":
-        try:
-            radius = float(input("Введите радиус шара: "))
-
-            if radius < 0:
-                print(
-                    "Ошибка: радиус не может быть отрицательным! Установлен радиус 0."
-                )
-                return cls(0)
-
-            return cls(radius)
-        except ValueError:
-            print("Ошибка: введите числовое значение! Установлен радиус 0.")
-            return cls(0)
-
-    def virtual_output(self) -> None:
-        print("  Шар:")
-        print(f"  Радиус: {self.__radius}")
-        print(f"  Площадь поверхности: {self.surface_area():.2f}")
-        print(f"  Объем: {self.volume():.2f}")

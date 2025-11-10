@@ -27,13 +27,3 @@ if __name__ == "__main__":
     print(f"После уменьшения крепости: {vodka}")
 
     print(f"Крепость напитка: {vodka.strength}%")
-
-    try:
-        vodka.strength = 150
-    except ValueError as e:
-        print(f"Ошибка: {e}")
-
-    try:
-        water.density = -10
-    except ValueError as e:
-        print(f"Ошибка: {e}")
