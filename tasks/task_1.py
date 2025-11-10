@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from tasks.liquid import Alcohol, Liquid
+from liquid import Alcohol, Liquid
 
 if __name__ == "__main__":
     water = Liquid("Вода", 997)
